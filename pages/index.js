@@ -1,6 +1,6 @@
 import Layout from "components/Layout";
-import responsiveImage from "img/steve-johnson-unsplash.jpg?sizes[]=375,sizes[]=750,sizes[]=1125,sizes[]=1500,sizes[]=2000,sizes[]=2500,sizes[]=3000";
-import responsiveImageWebp from "img/steve-johnson-unsplash.jpg?{sizes:[375,750,1125,1500,2000,2500,3000], format:'webp', quality: 60}";
+import responsiveImage from "img/steve-johnson-unsplash.jpg?resize&sizes[]=375,sizes[]=750,sizes[]=1125,sizes[]=1500,sizes[]=2000,sizes[]=2500,sizes[]=3000";
+import responsiveImageWebp from "img/steve-johnson-unsplash.jpg?resize&{sizes:[375,750,1125,1500,2000,2500,3000], format:'webp', quality: 60}";
 
 const Index = () => (
   <Layout>
