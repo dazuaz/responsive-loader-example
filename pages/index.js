@@ -1,16 +1,22 @@
-import Layout from "../components/Layout"
-import { Image } from "../components/Image"
-import img from "../img/tim-mossholder-xY56WiUYFjk-unsplash.jpg?sizes[]=600,sizes[]=1200,sizes[]=2500"
-import imgWebp from "../img/tim-mossholder-xY56WiUYFjk-unsplash.jpg?sizes[]=600,sizes[]=1200,sizes[]=2500&format=webp"
+import Layout from "components/Layout";
+import responsiveImage from "img/steve-johnson-unsplash.jpg?sizes[]=375,sizes[]=750,sizes[]=1125,sizes[]=1500,sizes[]=2000,sizes[]=2500,sizes[]=3000";
+import responsiveImageWebp from "img/steve-johnson-unsplash.jpg?{sizes:[375,750,1125,1500,2000,2500,3000], format:'webp', quality: 60}";
 
-export default () => (
+const Index = () => (
   <Layout>
-    <h1 className='text-5xl font-bold text-purple-500'>
-      NextJs with TailwindCSS 👌🏼
-    </h1>
-    <picture>
-      <source srcSet={imgWebp.srcSet} type='image/webp' />
-      <img src={img.src} srcSet={img.srcSet} sizes='100vw' />
-    </picture>
+    <div className='max-w-screen-lg mx-auto mt-4'>
+      <picture>
+        <source srcSet={responsiveImageWebp.srcSet} type='image/webp' />
+        <img
+          src={responsiveImage.src}
+          className='w-full'
+          srcSet={responsiveImage.srcSet}
+          width={responsiveImage.width}
+          height={responsiveImage.height}
+          sizes='(min-width: 1024px) 1024px, 100vw'
+        />
+      </picture>
+    </div>
   </Layout>
-)
+);
+export default Index;

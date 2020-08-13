@@ -1,23 +1,23 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-})
-
-module.exports = withBundleAnalyzer({
-  webpack: (config, options) => {
+module.exports = {
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push({
-      test: /\.(jpe?g|png)$/i,
+      test: /\.(jpe?g|png|webp)$/i,
       use: [
         {
-          loader: "responsive-images-loader",
+          loader: "responsive-loader",
           options: {
-            adapter: require("responsive-images-loader/sharp"),
-            publicPath: "/_next",
-            name: "static/media/[hash]-[width].[ext]",
+            adapter: require("responsive-loader/sharp"),
+            publicPath: "/_next/static/media",
+            outputPath: "static/media",
+            name: "[name][hash:7]-[width].[ext]",
+            placeholder: true,
+            placeholderSize: 20,
+            quality: 60,
+            esModule: true,
           },
         },
       ],
-    })
-
-    return config
+    });
+    return config;
   },
-})
+};
