@@ -4,16 +4,16 @@ import responsiveImageWebp from "img/steve-johnson-unsplash.jpg?resize&{sizes:[3
 
 const Index = () => (
   <Layout>
-    <div className='max-w-screen-lg mx-auto mt-4'>
+    <div className="max-w-screen-lg mx-auto mt-4">
       <picture>
-        <source srcSet={responsiveImageWebp.srcSet} type='image/webp' />
+        <source srcSet={responsiveImageWebp.srcSet} type="image/webp" />
         <img
           src={responsiveImage.src}
-          className='w-full'
+          className="w-full"
           srcSet={responsiveImage.srcSet}
           width={responsiveImage.width}
           height={responsiveImage.height}
-          sizes='(min-width: 1024px) 1024px, 100vw'
+          sizes="(min-width: 1024px) 1024px, 100vw"
         />
       </picture>
     </div>

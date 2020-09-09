@@ -2,25 +2,25 @@ import Link from "next/link";
 import Head from "next/head";
 
 const Nav = ({ children }) => (
-  <div className='flex flex-col w-screen min-h-screen antialiased text-gray-900'>
+  <div className="flex flex-col w-screen min-h-screen antialiased text-gray-900">
     <Head>
       <title>Responsive Loader</title>
     </Head>
-    <nav className='p-4 shadow-xs w-full'>
-      <ul className='flex space-x-4 text-indigo-700 font-bold max-w-screen-lg mx-auto'>
+    <nav className="p-4 shadow-xs w-full">
+      <ul className="flex space-x-4 text-indigo-700 font-bold max-w-screen-lg mx-auto">
         <li>
-          <Link href='/'>
+          <Link href="/">
             <a>Simple</a>
           </Link>
         </li>
         <li>
-          <Link href='/fancy'>
-            <a>Fancy Component</a>
+          <Link href="/gatsby-image">
+            <a>Gatsby Image</a>
           </Link>
         </li>
         <li>
-          <Link href='/clasic'>
-            <a>Clasic</a>
+          <Link href="/classic">
+            <a>Classic</a>
           </Link>
         </li>
       </ul>

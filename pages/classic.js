@@ -3,18 +3,18 @@ import responsiveImage from "img/steve-johnson-unsplash.jpg?sizes[]=375,sizes[]=
 
 const Clasic = () => (
   <Layout>
-    <div className='max-w-screen-md mx-auto mt-4'>
+    <div className="max-w-screen-md mx-auto mt-4">
       <div
         style={{
           position: "relative",
           paddingTop: `${
             (responsiveImage.height / responsiveImage.width) * 100
           }%`,
-          // paddingTop: `56.25%`,
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundImage: 'url("' + responsiveImage.placeholder + '")',
-        }}>
+        }}
+      >
         <img
           style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }}
           src={responsiveImage.src}
