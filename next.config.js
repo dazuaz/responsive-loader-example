@@ -14,7 +14,6 @@ module.exports = withBundleAnalyzer({
           loader: "responsive-loader",
           options: {
             adapter: require("responsive-loader/sharp"),
-            sizes: [500, 750, 1000],
             publicPath: "/_next",
             name: "static/media/[hash]-[width].[ext]",
           },

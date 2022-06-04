@@ -23,7 +23,6 @@ const ResponsiveImage = () => (
         />
       </div>
       <div className="px-4 py-8 max-w-3xl mx-auto sm:px-6 md:px-0 sm:py-10 lg:max-w-4xl lg:py-12 ">
-        <div>{JSON.stringify(responsiveImage, 2, null)}</div>
         <article className="prose lg:prose-xl">
           <h1>This is a good example</h1>
           <p>
