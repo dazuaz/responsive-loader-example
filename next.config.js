@@ -3,6 +3,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 module.exports = withBundleAnalyzer({
+  images: {
+    disableStaticImages: true
+  },
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(jpe?g|png)$/i,
@@ -11,11 +14,13 @@ module.exports = withBundleAnalyzer({
           loader: "responsive-loader",
           options: {
             adapter: require("responsive-loader/sharp"),
+            sizes: [500, 750, 1000],
             publicPath: "/_next",
             name: "static/media/[hash]-[width].[ext]",
           },
         },
       ],
+      type: 'javascript/auto',
     });
 
     return config;
